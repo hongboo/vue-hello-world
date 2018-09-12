@@ -10,7 +10,7 @@ export default {
     name : '',
     data() {
         return {
-            data : '这是第一页'
+            data : '这是第二页'
         }
     },
     methods : {
@@ -29,7 +29,7 @@ export default {
 
     },
 }
-
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
+
 </style>
