@@ -23,10 +23,11 @@ components: { },
   data () {
     return {
       menuArr : [
-          {name : '什么是vue', path : '#/first/page_1'},
-          {name : '使用前需要哪些基础知识', path : '#/first/page_2'},
-          {name : 'vue如何使用', path : '#/first/page_3'},
-          {name : 'vue常用的第三方组件', path : '#/first/page_4'},
+          {name : 'vue官方首页', path : '#/gov-page'},
+          {name : '什么是vue', path : '#/page_1'},
+          {name : '使用前需要哪些基础知识', path : '#/page_2'},
+          {name : 'vue如何使用', path : '#/page_3'},
+          {name : 'vue常用的第三方组件', path : '#/page_4'},
       ],
     }
   },
@@ -51,14 +52,22 @@ components: { },
 // @import url('../../assets/common.scss');
 @import '../../assets/common';
 .warp-box {
-    border: solid 10px black;
+    border: solid 1px black;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    margin: 80px 0;
     .menu-box {
-    float: left;
-        border: solid 5px yellowgreen;
+        float: left;
+        border: solid 1px yellowgreen;
+        margin-right: 30px;
+        width: 20%;
     }
     .content-box {
-        float: left;
-        border: solid 5px blue;
+        position: relative;
+        border: solid 1px blue;
+        left: 20%;
+        width: 80%;;
     }
     &:after {
         height : 0;
