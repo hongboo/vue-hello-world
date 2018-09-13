@@ -18,7 +18,7 @@
 <script>
 /* eslint-disable */
 export default {
-components: { },
+components: {  },
   name: 'first',
   data () {
     return {

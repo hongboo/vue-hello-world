@@ -41,4 +41,12 @@ let router = new Router({
     },
   ]
 });
+router.beforeEach((to,from,next) => {
+  if(to.path === '/')
+    next({
+      path : '/gov-page'
+    })
+  else
+    next()
+})
 export default router;
