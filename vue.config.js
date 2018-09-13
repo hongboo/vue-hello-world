@@ -1,3 +1,4 @@
+var proxyConfig = require('./proxyConfig')
 module.exports = {
     // // 基本路径
     // baseUrl: '/',
@@ -44,8 +45,8 @@ module.exports = {
      port: 8082,
      https: false,
      hotOnly: false,
-     proxy: null, // 设置代理
-    //  before: app => {}
+     proxy: proxyConfig.proxy, // 设置代理
+    //  before: app => {}s
     },
     // // 第三方插件配置
     // pluginOptions: {

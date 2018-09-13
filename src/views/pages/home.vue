@@ -17,6 +17,7 @@
 </template>
 <script>
 /* eslint-disable */
+import { mapGetters, mapActions } from 'vuex'
 export default {
 components: {  },
   name: 'first',
@@ -32,14 +33,14 @@ components: {  },
     }
   },
   methods: {
-    // ...mapActions([
-    // ]),
+    ...mapActions([
+    ]),
   },
   watch: {
   },
   computed: {
-    // ...mapGetters([
-    // ])
+    ...mapGetters([
+    ])
   },
   created () {
   },
@@ -52,20 +53,20 @@ components: {  },
 // @import url('../../assets/common.scss');
 @import '../../assets/common';
 .warp-box {
-    border: solid 1px black;
+    // border: solid 1px black;
     position: relative;
     left: 10%;
     width: 80%;
     margin: 80px 0;
     .menu-box {
         float: left;
-        border: solid 1px yellowgreen;
+        // border: solid 1px yellowgreen;
         margin-right: 30px;
         width: 20%;
     }
     .content-box {
         position: relative;
-        border: solid 1px blue;
+        // border: solid 1px blue;
         left: 20%;
         width: 80%;;
     }
