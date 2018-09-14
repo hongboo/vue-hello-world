@@ -4,11 +4,11 @@ const Mock = require('mockjs')
 
 Mock.mock('/api/getTestDataByGet', (req, res) => {
     return {
-        "description" : "这是第一页"
+        "description" : "axios,get方式的请求，使用Mock.js模拟后端获取数据"
     }
 });
 Mock.mock('/api/getTestDataByPost', (req, res) => {
     return {
-        "description" : "这是第二页"
+        "description" : "axios,post方式的请求，使用Mock.js模拟后端获取数据"
     }
 });

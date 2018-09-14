@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- <span>{{data}}</span> -->
         <div class="title">
             <ul>
                 <li v-for="(item, index) in tips" :key="index">
@@ -10,8 +9,8 @@
         </div>
         <div class="body-box">
             <div id="tip_1" class="tip_1">
-                <!-- <div>{{tips[0].tip}}</div> -->
                 <div class="code">
+                    <div>前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程</div>
                     <pre>
                         <code>
                             &lt;html&gt;
@@ -150,16 +149,12 @@
 </template>
 <script>
 /* eslint-disable */
-import api from '@/api/index'
-import { mapGetters, mapActions } from 'vuex'
 export default {
     component : {},
     name : '',
     data() {
         return {
-            data : '',
             tips : [
-                // {tip : '用于前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程'},
                 {tip : '前后端分离的现代前端框架'},
                 {tip : '基于数据，而非dom'},
                 {tip : '一切皆组件'},
@@ -167,41 +162,19 @@ export default {
         }
     },
     methods : {
-        ...mapActions([
-            'getLoginStatus'
-        ]),
-        getTestDataByGet(params) {
-            api.getTestDataByGet(params).then(json => {
-                console.log(json)
-                this.data = json.data.description
-            });
-        },
-        getTestDataByPost(params) {
-            api.getTestDataByPost(params).then(json => {
-                console.log(json)
-            });
-        },
-        setLoginStatus() {
-            console.log('登陆前的状态： ' + this.loginStatus)
-            this.getLoginStatus(true);
-            console.log('登陆后的状态： ' + this.loginStatus)
-        }
+
     },
     watch : {
     
     },
     computed : {
-    ...mapGetters([
-            'loginStatus'
-        ])
+
     },
     created() {
 
     },
     mounted() {
-        this.getTestDataByGet();
-        this.getTestDataByPost();
-        this.setLoginStatus();
+
     },
 }
 
@@ -240,7 +213,7 @@ export default {
         .description {
             position: relative;
             left: 100px;
-            width: 60%;
+            width: 62%;
             background-color: rgb(233, 233, 223);
             p {
                 margin: 10px 0;
@@ -257,7 +230,7 @@ export default {
         div {
             background-color: rgb(233, 233, 223);
             margin-left: 100px;
-            width: 60%;
+            width: 62%;
             p {
                 margin: 10px 0;
             }
