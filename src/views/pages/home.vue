@@ -25,10 +25,10 @@ components: {  },
     return {
       menuArr : [
           {name : 'vue官方首页', path : '#/gov-page'},
-          {name : '什么是vue', path : '#/page_1'},
-          {name : '使用前需要哪些基础知识', path : '#/page_2'},
-          {name : 'vue如何使用', path : '#/page_3'},
-          {name : 'vue常用的第三方组件', path : '#/page_4'},
+          {name : '基础介绍', path : '#/page_1'},
+          {name : '技术栈', path : '#/page_2'},
+          {name : '快速开发', path : '#/page_3'},
+          {name : '常用的第三方组件', path : '#/page_4'},
       ],
     }
   },
@@ -50,7 +50,8 @@ components: {  },
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss" rel="stylesheet/scss">
-// @import url('../../assets/common.scss');
+// @import url('../../assets/default.scss');
+@import '../../assets/default';
 @import '../../assets/common';
 .warp-box {
     // border: solid 1px black;
@@ -58,11 +59,14 @@ components: {  },
     left: 10%;
     width: 80%;
     margin: 80px 0;
+    // background-color: lavender;
     .menu-box {
         float: left;
         // border: solid 1px yellowgreen;
-        margin-right: 30px;
         width: 20%;
+        ul {
+            margin-left: 90px;
+        }
     }
     .content-box {
         position: relative;
