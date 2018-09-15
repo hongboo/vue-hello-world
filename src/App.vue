@@ -4,6 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
+    <div id="nav">
+      同道•律师事业部•vue入门介绍
+    </div>
     <router-view/>
   </div>
 </template>
