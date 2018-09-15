@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page_1-box">
         <div class="title">
             <ul>
                 <li v-for="(item, index) in tips" :key="index">
@@ -10,7 +10,7 @@
         <div class="body-box">
             <div id="tip_1" class="tip_1">
                 <div class="code">
-                    <div class="dec">前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程</div>
+                    <div class="dec"><p>前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程</p></div>
                     <pre>
                         <code>
                             &lt;html&gt;
@@ -145,6 +145,9 @@
                 </div>
             </div>
         </div>
+        <div class="return-top-box" v-if="scrollRate > 0.5" @click="scroll">
+            回到顶部
+        </div>
     </div>
 </template>
 <script>
@@ -158,14 +161,17 @@ export default {
                 {tip : '前后端分离的现代前端框架'},
                 {tip : '基于数据，而非dom'},
                 {tip : '一切皆组件'},
-            ]
+            ],
+            scrollRate : 0,
         }
     },
     methods : {
-
+        scroll() {
+            location.href='#app'
+        }
     },
     watch : {
-    
+
     },
     computed : {
 
@@ -174,7 +180,10 @@ export default {
 
     },
     mounted() {
-
+        let that = this;
+        document.onscroll = function(){
+            that.scrollRate = document.body.scrollTop / document.body.scrollHeight
+        }
     },
 }
 
@@ -182,79 +191,101 @@ export default {
 <style scoped lang="scss" rel="stylesheet/scss">
 @import '../../assets/default';
 @import '../../assets/common';
-.title {
-    ul {
-        li {
-            list-style-type: none;
-            border-bottom: 1px dashed #000;
-            width: 65%;
-            letter-spacing: 2px;
+.page_1-box {
+    position: relative;
+    left: 150px;
+    .title {
+        ul {
+            li {
+                list-style-type: none;
+                border-bottom: 1px dashed #000;
+                width: 65%;
+                letter-spacing: 2px;
+            }
         }
     }
-}
-.body-box {
-    .tip_1 {
-        position: relative;
-        // background-color: rgb(180, 231, 160);
-        .code {
-            width: 100%;
-            float: left;
-            .dec {
+    .body-box {
+        .tip_1 {
+            position: relative;
+            // background-color: rgb(180, 231, 160);
+            .code {
+                width: 100%;
+                float: left;
+                .dec {
+                    width: 65%;
+                    letter-spacing: 2px;
+                    background-color: rgb(233, 233, 223);
+                    border-bottom: 1px dashed;
+                    p {
+                        padding-left: 10px;
+                    }
+                }
+            }
+            &:after {
+                height : 0;
+                content : ' ';
+                display : block;
+                clear : both;
+                visibility : hidden;
+            }
+        }
+        .tip_2 {
+            // background-color: rgb(143, 184, 245);
+            .description {
+                position: relative;
+                // left: 100px;
                 width: 65%;
                 letter-spacing: 2px;
                 background-color: rgb(233, 233, 223);
-                border-bottom: 1px dashed;
+                p {
+                    margin: 10px 0;
+                    border-bottom: 1px dashed;
+                    padding-top: 5px;
+                    padding-left: 10px;
+                }
+            }
+            .code{
+                span {
+                    margin-left: 80px;
+                }
             }
         }
-        &:after {
-            height : 0;
-            content : ' ';
-            display : block;
-            clear : both;
-            visibility : hidden;
-        }
-    }
-    .tip_2 {
-        // font-size: 14px;
-        // background-color: rgb(143, 184, 245);
-        .description {
-            position: relative;
-            left: 100px;
-            width: 65%;
-            letter-spacing: 2px;
-            background-color: rgb(233, 233, 223);
-            p {
-                margin: 10px 0;
-                border-bottom: 1px dashed;
-                padding-top: 5px;
-                padding-left: 10px;
+        .tip_3 {
+            div {
+                background-color: rgb(233, 233, 223);
+                // margin-left: 100px;
+                width: 65%;
+                letter-spacing: 2px;
+                p {
+                    margin: 10px 0;
+                    border-bottom: 1px dashed;
+                    padding-top: 5px;
+                    padding-left: 10px;
+                }
             }
         }
-        .code{
-            span {
-                margin-left: 80px;
-            }
-        }
-    }
-    .tip_3 {
-        // font-size: 14px;
-        div {
-            background-color: rgb(233, 233, 223);
-            margin-left: 100px;
-            width: 65%;
-            letter-spacing: 2px;
-            p {
-                margin: 10px 0;
-                border-bottom: 1px dashed;
-                padding-top: 5px;
-                padding-left: 10px;
+        pre {
+            font-size: 14px;
+            code {
+                text-align: center;
             }
         }
     }
-    pre {
-        font-size: 14px;
-        code {
-            text-align: center;
+
+    .return-top-box {
+        position: fixed;
+        bottom: 163px;
+        right: 250px;
+        color: rgb(159, 233, 39);
+        background-color: rgba(223, 230, 226, 0.336);
+        padding: 10px;
+        border-radius: 25px;
+        a {
+            color: rgb(235, 209, 209);
+        }
+        &:hover {
+            cursor: pointer;
+            background-color:rgb(80, 63, 238); 
         }
     }
 }

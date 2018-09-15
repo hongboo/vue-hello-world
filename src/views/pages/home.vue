@@ -3,14 +3,13 @@
         <!-- 菜单栏 -->
         <div class="menu-box">
             <ul>
-                <li v-for="(item, index) in menuArr" :key="index">
-                    <a :href="item.path">{{item.name}}</a>
+                <li v-for="(item, index) in menuArr" :key="index" @click="visited(index)">
+                    <a :href="item.path" :class="item.visited ? 'visited' : ''">{{item.name}}</a>
                 </li>
             </ul>
         </div>
         <!-- 内容区 -->
         <div class="content-box">
-            <!-- <span>律师事业部 • Vue.js入门介绍</span> -->
             <router-view/>
         </div>
     </div>
@@ -24,17 +23,23 @@ components: {  },
   data () {
     return {
       menuArr : [
-          {name : 'vue官方首页', path : '#/gov-page'},
-          {name : '基础介绍', path : '#/page_1'},
-          {name : '技术栈', path : '#/page_2'},
-          {name : '快速开发', path : '#/page_3'},
-          {name : '常用的第三方组件', path : '#/page_4'},
+          {name : 'vue官方首页', path : '#/gov-page', visited : false},
+          {name : '基础介绍', path : '#/page_1', visited : false},
+          {name : '技术栈', path : '#/page_2', visited : false},
+          {name : '快速开发', path : '#/page_3', visited : false},
+          {name : '常用的第三方组件', path : '#/page_4', visited : false},
       ],
     }
   },
   methods: {
     ...mapActions([
     ]),
+    visited(index) {
+        this.menuArr.forEach(menu => {
+            menu.visited = false;
+        });
+        this.menuArr[index].visited = true;
+    }
   },
   watch: {
   },
@@ -66,6 +71,9 @@ components: {  },
         width: 20%;
         ul {
             margin-left: 90px;
+            .visited {
+                color: aqua;
+            }
         }
     }
     .content-box {

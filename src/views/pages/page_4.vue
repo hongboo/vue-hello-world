@@ -3,9 +3,9 @@
        <div class="title">常用组件</div>
        <div class="content">
             <ul>
-                <li><a href="https://vuex.vuejs.org/zh/guide/">vuex</a></li>
-                <li><a href="https://vue-loader.vuejs.org/">vue-router</a></li>
-                <li><a href="https://www.kancloud.cn/yunye/axios/234845">axios</a> & <a href="https://www.npmjs.com/package/vue-axios">vue-axios</a></li>
+                <li><a href="https://vuex.vuejs.org/zh/guide/" target="_blank">vuex</a></li>
+                <li><a href="https://vue-loader.vuejs.org/" target="_blank">vue-router</a></li>
+                <li><a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank">axios</a> & <a href="https://www.npmjs.com/package/vue-axios" target="_blank">vue-axios</a></li>
             </ul>
        </div>
     </div>

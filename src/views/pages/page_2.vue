@@ -15,7 +15,10 @@ export default {
             // data : '这是第二页'
             content : {
                 html : 
-                    `<ul>
+                    `<ul style="position: relative;
+                            left: 55px;
+                            width: 70%;
+                            list-style-type: bengali;">
                         <li>HTML、CSS、javascript基础</li>
                         <li>CSS预处理器</li>
                         <li>javascript最新语法（ES6）</li>

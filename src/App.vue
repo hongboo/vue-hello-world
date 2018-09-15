@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <div id="nav">
-      同道•律师事业部•vue入门介绍
+      <div>同道•律师事业部•vue入门介绍</div>
     </div>
     <router-view/>
   </div>
@@ -20,13 +20,19 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  div {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 47%;
+    letter-spacing: 5px;
+    font-size: 20px;
   }
+  // a {
+  //   font-weight: bold;
+  //   color: #2c3e50;
+  //   &.router-link-exact-active {
+  //     color: #42b983;
+  //   }
+  // }
 }
 </style>
