@@ -182,7 +182,8 @@ export default {
     mounted() {
         let that = this;
         document.onscroll = function(){
-            that.scrollRate = document.body.scrollTop / document.body.scrollHeight
+            // that.scrollRate = document.body.scrollTop / document.body.scrollHeight
+            that.scrollRate = document.documentElement.scrollTop / document.documentElement.scrollHeight
         }
     },
 }
@@ -199,7 +200,7 @@ export default {
             li {
                 list-style-type: none;
                 border-bottom: 1px dashed #000;
-                width: 65%;
+                width: 75%;
                 letter-spacing: 2px;
             }
         }
@@ -212,7 +213,7 @@ export default {
                 width: 100%;
                 float: left;
                 .dec {
-                    width: 65%;
+                    width: 75%;
                     letter-spacing: 2px;
                     background-color: rgb(233, 233, 223);
                     border-bottom: 1px dashed;
@@ -234,7 +235,7 @@ export default {
             .description {
                 position: relative;
                 // left: 100px;
-                width: 65%;
+                width: 75%;
                 letter-spacing: 2px;
                 background-color: rgb(233, 233, 223);
                 p {
@@ -254,7 +255,7 @@ export default {
             div {
                 background-color: rgb(233, 233, 223);
                 // margin-left: 100px;
-                width: 65%;
+                width: 75%;
                 letter-spacing: 2px;
                 p {
                     margin: 10px 0;
@@ -275,7 +276,7 @@ export default {
     .return-top-box {
         position: fixed;
         bottom: 163px;
-        right: 250px;
+        right: 222px;
         color: rgb(159, 233, 39);
         background-color: rgba(223, 230, 226, 0.336);
         padding: 10px;
