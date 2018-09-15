@@ -10,7 +10,7 @@
         <div class="body-box">
             <div id="tip_1" class="tip_1">
                 <div class="code">
-                    <div>前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程</div>
+                    <div class="dec">前后端分离的现代前端框架，有别于业务、数据、渲染、排版布局等混用的传统开发流程</div>
                     <pre>
                         <code>
                             &lt;html&gt;
@@ -187,7 +187,8 @@ export default {
         li {
             list-style-type: none;
             border-bottom: 1px dashed #000;
-            width: 60%;
+            width: 65%;
+            letter-spacing: 2px;
         }
     }
 }
@@ -198,6 +199,12 @@ export default {
         .code {
             width: 100%;
             float: left;
+            .dec {
+                width: 65%;
+                letter-spacing: 2px;
+                background-color: rgb(233, 233, 223);
+                border-bottom: 1px dashed;
+            }
         }
         &:after {
             height : 0;
@@ -213,10 +220,14 @@ export default {
         .description {
             position: relative;
             left: 100px;
-            width: 62%;
+            width: 65%;
+            letter-spacing: 2px;
             background-color: rgb(233, 233, 223);
             p {
                 margin: 10px 0;
+                border-bottom: 1px dashed;
+                padding-top: 5px;
+                padding-left: 10px;
             }
         }
         .code{
@@ -230,9 +241,13 @@ export default {
         div {
             background-color: rgb(233, 233, 223);
             margin-left: 100px;
-            width: 62%;
+            width: 65%;
+            letter-spacing: 2px;
             p {
                 margin: 10px 0;
+                border-bottom: 1px dashed;
+                padding-top: 5px;
+                padding-left: 10px;
             }
         }
     }
