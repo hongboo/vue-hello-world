@@ -182,8 +182,11 @@ export default {
     mounted() {
         let that = this;
         document.onscroll = function(){
-            // that.scrollRate = document.body.scrollTop / document.body.scrollHeight
-            that.scrollRate = document.documentElement.scrollTop / document.documentElement.scrollHeight
+            if(new RegExp('Linux').test(navigator.platform)) {
+                that.scrollRate = document.body.scrollTop / document.body.scrollHeight
+            } else {
+                that.scrollRate = document.documentElement.scrollTop / document.documentElement.scrollHeight
+            }
         }
     },
 }
