@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <div id="nav">
-      <div>同道•律师事业部•vue入门介绍</div>
+      <!-- <div>同道•律师事业部•vue入门介绍</div> -->
+      <!-- <div>vue入门介绍</div> -->
     </div>
     <router-view/>
   </div>

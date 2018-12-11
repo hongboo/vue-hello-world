@@ -42,11 +42,11 @@ module.exports = {
     devServer: {
      open: process.platform === 'darwin',
      host: '0.0.0.0',
-     port: 8082,
+     port: 8085,
      https: false,
      hotOnly: false,
      proxy: proxyConfig.proxy, // 设置代理
-    //  before: app => {}s
+    //  before: app => {}
     },
     // // 第三方插件配置
     // pluginOptions: {

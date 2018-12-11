@@ -7,6 +7,8 @@ import page_1 from "@/views/pages/page_1";
 import page_2 from "@/views/pages/page_2";
 import page_3 from "@/views/pages/page_3";
 import page_4 from "@/views/pages/page_4";
+import SlotTest from "@/views/pages/slot-test/slot-test";
+import xxxTest from "@/views/pages/slot-test/xxx-test";
 
 Vue.use(Router);
 
@@ -39,8 +41,27 @@ let router = new Router({
         { path: '/page_4', component: page_4 },
       ]
     },
+    {
+      path: '/slot-test',
+      name: 'SlotTest',
+      component: SlotTest,
+      meta: {
+        title: '插槽测试'
+      }
+    },
+    {
+      path: '/xxx-test',
+      name: 'xxxTest',
+      component: xxxTest,
+      meta: {
+        title: '插槽测试'
+      }
+    },
   ]
 });
+
+
+
 router.beforeEach((to,from,next) => {
   if(to.path === '/')
     next({
