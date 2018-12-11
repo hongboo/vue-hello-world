@@ -19,6 +19,7 @@ let router = new Router({
     //   path: "/",
     //   name: "home",
     //   component: Home
+    
     // },
     {
       path: "/about",
